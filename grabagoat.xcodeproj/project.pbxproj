@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37C681751512146B004B1361 /* PGExternalScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C681741512146B004B1361 /* PGExternalScreen.m */; };
 		A1A61CCF1511398A0030D158 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A61CCE1511398A0030D158 /* Foundation.framework */; };
 		A1A61CD11511398A0030D158 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A61CD01511398A0030D158 /* UIKit.framework */; };
 		A1A61CD31511398A0030D158 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A61CD21511398A0030D158 /* CoreGraphics.framework */; };
@@ -36,10 +37,11 @@
 		A1A61D121511398A0030D158 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A61D111511398A0030D158 /* MainViewController.m */; };
 		A1A61D141511398A0030D158 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1A61D131511398A0030D158 /* MainViewController.xib */; };
 		A1A61D1D151139B70030D158 /* www in Resources */ = {isa = PBXBuildFile; fileRef = A1A61D1C151139B70030D158 /* www */; };
-		A1A61D2015113A150030D158 /* PGExternalScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A61D1F15113A150030D158 /* PGExternalScreen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37C681731512146B004B1361 /* PGExternalScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGExternalScreen.h; sourceTree = "<group>"; };
+		37C681741512146B004B1361 /* PGExternalScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGExternalScreen.m; sourceTree = "<group>"; };
 		A1A61CCA1511398A0030D158 /* grabagoat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grabagoat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A61CCE1511398A0030D158 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1A61CD01511398A0030D158 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -75,8 +77,6 @@
 		A1A61D131511398A0030D158 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainViewController.xib; path = Classes/MainViewController.xib; sourceTree = "<group>"; };
 		A1A61D161511398A0030D158 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		A1A61D1C151139B70030D158 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
-		A1A61D1E151139F90030D158 /* PGExternalScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGExternalScreen.h; sourceTree = "<group>"; };
-		A1A61D1F15113A150030D158 /* PGExternalScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGExternalScreen.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,9 +235,9 @@
 		A1A61D151511398A0030D158 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				37C681731512146B004B1361 /* PGExternalScreen.h */,
+				37C681741512146B004B1361 /* PGExternalScreen.m */,
 				A1A61D161511398A0030D158 /* README */,
-				A1A61D1E151139F90030D158 /* PGExternalScreen.h */,
-				A1A61D1F15113A150030D158 /* PGExternalScreen.m */,
 			);
 			name = Plugins;
 			sourceTree = "<group>";
@@ -337,7 +337,7 @@
 				A1A61CEF1511398A0030D158 /* main.m in Sources */,
 				A1A61D0F1511398A0030D158 /* AppDelegate.m in Sources */,
 				A1A61D121511398A0030D158 /* MainViewController.m in Sources */,
-				A1A61D2015113A150030D158 /* PGExternalScreen.m in Sources */,
+				37C681751512146B004B1361 /* PGExternalScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +430,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "grabagoat/grabagoat-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "grabagoat/grabagoat-Info.plist";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -457,6 +458,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "grabagoat/grabagoat-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "grabagoat/grabagoat-Info.plist";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -494,6 +496,7 @@
 				A1A61D1B1511398A0030D158 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

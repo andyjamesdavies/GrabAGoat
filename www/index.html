@@ -4,64 +4,23 @@
     <meta charset="utf-8">
     <title>Grab a Goat</title>
     
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+                        
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/application.js"></script>
+                        
+    <script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script>
+    <script type="text/javascript" src="ExternalScreen.js"></script>
 </head>
 <body>
     <div class="container">
-    <button type="submit" name="submit" id="submit">Grab a goat</button>
-    <button type="submit" name="connect" id="connect">connect external screen</button>
-    <div class="result"></div>
+        <button type="submit" name="submit" id="submit">Grab a goat</button>
+        <div class="result"></div>
     </div>
     
-    <script type="text/javascript" src="http://localhost:8080/target/target-script-min.js#anonymous"></script>
-    
-    <script type="text/javascript" src="jquery.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script>
-    <script type="text/javascript" src="ExternalScreen.js"></script>
-    <script type="text/javascript">
-
-        
-        function onDeviceReady()
-        {
-            PGExternalScreen.setupScreenConnectionNotificationHandlers( resultHandler, errorHandler );
-        }
-        
-        function resultHandler (result) {
-            //dislpay an alert using a timeout so that it doesn't block loading of the webView content
-            setTimeout( function() { alert("SUCCESS: \r\n"+result) }, 100 );
-        }
-        
-        function errorHandler (error) {
-            alert("ERROR: \r\n"+error);
-        }
-        
-        document.addEventListener("deviceready", onDeviceReady, false);
-        $(document).ready(function() {
-
-        	var targetUrl = "http://ajax.googleapis.com/ajax/services/search/images?v=1.0&rsz=8&q=goat&safe=active&callback=?";
-
-                         
-            $('#connect').bind('click', function(e) {
-                e.preventDefault();
-                PGExternalScreen.checkExternalScreenAvailable( resultHandler, errorHandler );
-            });              
-                          
-        	$('#submit').bind('click', function (e) {
-        		e.preventDefault();
-        		
-        		$.getJSON(targetUrl, function(data){ 
-        			var dataArr = data.responseData.results;
-        		    var i = Math.floor(Math.random()*dataArr.length);
-        		    var item = dataArr[i];
-        		    
-        		    if (item.url.length > 0) {
-        		    	  $('.result').html('<img src="' + item.url + '" />');
-                          PGExternalScreen.loadHTMLResource( item.url, resultHandler, errorHandler )
-        		    }
-        		});
-        	});
-        });
-    </script>
+    <script type="text/javascript" src="http://localhost:8081/target/target-script-min.js#anonymous"></script>
 </body>
 </html>
